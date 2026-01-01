@@ -1,8 +1,8 @@
-export type EnvelopeTheme =
+export type MailTheme =
   | "default"
   | "love"
   | "christmas"
-  | "newyear"
+  | "new year"
   | "birthday";
 
 export interface Mail {
@@ -10,18 +10,8 @@ export interface Mail {
   date: Date;
   title: string;
   content: string;
-  theme?: EnvelopeTheme;
+  theme?: MailTheme;
 }
-
-export const createMail = (
-  id: string,
-  date: Date,
-  title: string,
-  content: string,
-  theme?: EnvelopeTheme
-): Mail => {
-  return { id, date, title, content, theme };
-};
 
 export const hidden = {
   opacity: 0,

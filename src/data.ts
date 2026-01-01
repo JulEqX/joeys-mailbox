@@ -1,0 +1,57 @@
+import type { Mail } from "./models/Mail";
+
+export const mails: Mail[] = [
+  {
+    id: "1",
+    date: new Date("2025-12-25"),
+    title: "Our Unofficial First Christmas",
+    content: `Dear Joey❤️,
+    It's been slightly over 10 months since I've joined Arise and 
+
+    I hope this holiday season brings you joy and helps you organize your thoughts and memories in a beautiful way.
+    Merry Christmas!
+With lots of love,
+Julian`,
+    theme: "christmas",
+  },
+  {
+    id: "2",
+    date: new Date("2024-12-10"),
+    title: "Holiday Greetings",
+    content:
+      "Season's Greetings!\n\nWishing you a wonderful holiday season filled with warmth, joy, and cherished moments with loved ones.\n\nMay this season bring you peace and happiness.\n\nWith warm wishes,\nYour Friend",
+    theme: "christmas",
+  },
+  {
+    id: "3",
+    date: new Date("2024-12-05"),
+    title: "Love Letter",
+    content:
+      "My Dearest,\n\nEvery moment with you feels like a dream come true. Your smile brightens my darkest days, and your laughter is the melody that plays in my heart.\n\nI am so grateful for every second we spend together. You are my everything.\n\nWith all my love,\nForever Yours",
+    theme: "love",
+  },
+  {
+    id: "4",
+    date: new Date("2024-11-28"),
+    title: "Thanksgiving Note",
+    content:
+      "Happy Thanksgiving!\n\nI wanted to take a moment to express my gratitude for your friendship and support throughout this year.\n\nYour kindness and encouragement have meant the world to me.\n\nWishing you a wonderful Thanksgiving filled with love, laughter, and delicious food!\n\nGratefully yours,\nJoey",
+    theme: "default",
+  },
+  {
+    id: "5",
+    date: new Date("2024-11-15"),
+    title: "Birthday Invitation",
+    content:
+      "You're Invited!\n\nJoin us for a birthday celebration!\n\nDate: November 30th\nTime: 6:00 PM\nLocation: The Garden Terrace\n\nPlease RSVP by November 25th. We'd love to have you there to celebrate this special day with us!\n\nSee you soon!",
+    theme: "birthday",
+  },
+  {
+    id: "6",
+    date: new Date("2024-01-01"),
+    title: "New Year Wishes",
+    content:
+      "Happy New Year!\n\nAs we step into a new year, I want to wish you endless possibilities, wonderful adventures, and the courage to chase your dreams.\n\nMay this year bring you health, happiness, and success in everything you do.\n\nCheers to new beginnings!\n\nWith hope and excitement,\nYour Friend",
+    theme: "new year",
+  },
+];
