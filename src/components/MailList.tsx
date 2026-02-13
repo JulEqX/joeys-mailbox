@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { hidden, shown } from "../models/Mail";
 import { motion, stagger } from "motion/react";
 import { useMailStore } from "../stores/mailStore";
-import EnvelopeBase from "./Envelope/EnvelopeBase";
+import Envelope from "./Envelope";
 
 export default function MailList() {
   const getMailsByMonthYear = useMailStore(
@@ -64,7 +64,7 @@ export default function MailList() {
                     onClick={() => setActiveMail(mail)}
                   >
                     <div className="mail-item-envelope">
-                      <EnvelopeBase />
+                      <Envelope theme={mail.theme} />
                     </div>
                     <div className="mail-item-info">
                       <div className="mail-item-title">{mail.title}</div>
@@ -80,6 +80,7 @@ export default function MailList() {
                 </>
               ))}
             </div>
+            <hr style={{ borderTop: "1px solid #ccc", margin: "20px 0" }} />
           </motion.div>
         ))}
       </motion.div>

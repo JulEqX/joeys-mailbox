@@ -2,7 +2,7 @@ export type MailTheme =
   | "default"
   | "love"
   | "christmas"
-  | "new year"
+  | "newyear"
   | "birthday";
 
 export interface Mail {
@@ -10,7 +10,7 @@ export interface Mail {
   date: Date;
   title: string;
   content: string;
-  theme?: MailTheme;
+  theme: MailTheme;
 }
 
 export const hidden = {

@@ -1,17 +1,31 @@
 import { motion } from "motion/react";
+import React from "react";
 
-export default function EnvelopeBase() {
+interface EnvelopeBaseProp {
+  theme: string;
+  EnvelopeSealIcon?: React.ComponentType;
+}
+
+export default function EnvelopeBase({
+  theme,
+  EnvelopeSealIcon,
+}: EnvelopeBaseProp) {
   return (
     <>
       <motion.div
-        className="envelope-container"
+        className={`envelope-container envelope-container-${theme}`}
         initial="idle"
         whileHover="hover"
         // exit="idle"
         animate="idle"
       >
+        {EnvelopeSealIcon && (
+          <div className="envelope-seal">
+            <EnvelopeSealIcon />
+          </div>
+        )}
         <motion.div
-          className="envelope-flap"
+          className={`envelope-flap envelope-flap-${theme}`}
           variants={{
             idle: {
               rotateX: 0,
@@ -26,7 +40,7 @@ export default function EnvelopeBase() {
           }}
         />
         <motion.div
-          className="envelope-letter"
+          className={`envelope-letter envelope-letter-${theme}`}
           variants={{
             idle: {
               y: 0,
@@ -48,7 +62,7 @@ export default function EnvelopeBase() {
             },
           }}
         />
-        <motion.div className="envelope-pocket" />
+        <motion.div className={`envelope-pocket envelope-pocket-${theme}`} />
       </motion.div>
     </>
   );

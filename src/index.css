@@ -89,7 +89,11 @@ button:focus-visible {
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 1rem 0;
+  padding: 1rem;
+  font-family: "Princess Sofia", cursive;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #242424;
 }
 
 .backdrop {
@@ -188,6 +192,7 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 48px;
+  padding: 1rem;
 }
 
 .mail-month-section {
@@ -264,6 +269,18 @@ button:focus-visible {
   box-shadow: 5px 5px 20px #161616;
 }
 
+.envelope-container-default {
+  background-color: #828282;
+}
+
+.envelope-container-christmas {
+  background-color: #ff7878;
+}
+
+.envelope-container-love {
+  background-color: #8f0700;
+}
+
 .envelope-flap {
   position: absolute;
   inset: 0;
@@ -273,10 +290,21 @@ button:focus-visible {
 
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
-  border-top: 63px solid green;
   border-bottom: 0;
 
   z-index: 1;
+}
+
+.envelope-flap-default {
+  border-top: 63px solid #828282;
+}
+
+.envelope-flap-christmas {
+  border-top: 63px solid #1f654c;
+}
+
+.envelope-flap-love {
+  border-top: 63px solid #8f0700;
 }
 
 .envelope-pocket {
@@ -287,12 +315,26 @@ button:focus-visible {
   margin: auto;
   max-height: 100%;
   max-width: 100%;
-
   border-top: 63px solid transparent;
-  border-bottom: 63px solid grey;
-  border-left: 100px solid #333;
-  border-right: 100px solid #333;
   z-index: 3;
+}
+
+.envelope-pocket-default {
+  border-bottom: 63px solid #ff7878;
+  border-left: 100px solid #f4f0bb;
+  border-right: 100px solid #da2c38;
+}
+
+.envelope-pocket-christmas {
+  border-bottom: 63px solid #ff7878;
+  border-left: 100px solid #f4f0bb;
+  border-right: 100px solid #da2c38;
+}
+
+.envelope-pocket-love {
+  border-bottom: 63px solid #de7e6a;
+  border-left: 100px solid #e7a999;
+  border-right: 100px solid #b31a1a;
 }
 
 .envelope-letter {
@@ -306,5 +348,27 @@ button:focus-visible {
   max-width: 100%;
   background-color: #eee7d7;
   box-shadow: inset 0 0 100px -20px BurlyWood;
+  border-radius: 10px;
   z-index: 0;
+}
+
+.envelope-seal {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  max-width: 100%;
+  max-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.envelope-seal svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }

@@ -1,25 +1,18 @@
-import type { EnvelopeBaseProps } from "./EnvelopeBase";
-import ChristmasEnvelope from "./ChristmasEnvelope";
-import LoveEnvelope from "./LoveEnvelope";
-import BirthdayEnvelope from "./BirthdayEnvelope";
-import NewYearEnvelope from "./NewYearEnvelope";
-import DefaultEnvelope from "./DefaultEnvelope";
+import EnvelopeBase from "./EnvelopeBase";
+import christmasTreeSvg from "../../assets/christmas_tree.svg?react";
+import heartSvg from "../../assets/heart.svg?react";
 
-export default function Envelope(props: EnvelopeBaseProps) {
-  const theme = props.mail.theme || "default";
-
+export default function Envelope({ theme }: { theme: string }) {
   switch (theme) {
     case "christmas":
-      return <ChristmasEnvelope {...props} />;
+      return <EnvelopeBase theme={theme} EnvelopeSealIcon={christmasTreeSvg} />;
     case "love":
-      return <LoveEnvelope {...props} />;
-    case "birthday":
-      return <BirthdayEnvelope {...props} />;
-    case "new year":
-      return <NewYearEnvelope {...props} />;
+      return <EnvelopeBase theme={theme} EnvelopeSealIcon={heartSvg} />;
+    // case "birthday":
+    //   return <BirthdayEnvelope {...props} />;
+    // case "newyear":
+    //   return <NewYearEnvelope {...props} />;
     default:
-      return <DefaultEnvelope {...props} />;
+      return <EnvelopeBase theme={theme} />;
   }
 }
-
-export type { EnvelopeBaseProps };
